@@ -21,6 +21,11 @@ def find_the_cheese(arr)
   arr.find {|x| cheese_types.include?(x)}
 end
 
-def words_with_b(arr)
-  
+words_with = ['barn','bungalow','house','apartment']
+def words_with_b(arr) 
+  arr.select do |word|
+    word.start_with?("b")
+  end
 end
+
+words_with_b(words_with)
